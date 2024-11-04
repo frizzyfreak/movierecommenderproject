@@ -1,5 +1,5 @@
 streamlit
-pickle
+pickles
 scikit-learn
 uvicorn
 ast
