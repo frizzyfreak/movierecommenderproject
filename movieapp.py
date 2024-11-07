@@ -10,13 +10,15 @@ def fetch_poster(movie_id):
     poster_path = data['poster_path']
     full_path = "https://image.tmdb.org/t/p/w500/" + poster_path
     return full_path
-def load_lottieurl(url):
+
+def load_lottieurl(url: str):
     r = requests.get(url)
     if r.status_code != 200:
         return None
-    return r.json()   
-lottie_animation1 = load_lottieurl("https://lottie.host/89d4a0c7-3098-438a-9b19-9b6421cb8751/5bOb6fMRs5.json")
-lottie_animation2 = load_lottieurl("https://lottie.host/119f3d04-4529-40b4-8824-d6d03c70a455/VmDN7sHTXR.json")
+    return r.json()
+
+lottie_animation1 = load_lottieurl(r"https://lottie.host/89d4a0c7-3098-438a-9b19-9b6421cb8751/5bOb6fMRs5.json")
+lottie_animation2 = load_lottieurl(r"https://lottie.host/119f3d04-4529-40b4-8824-d6d03c70a455/VmDN7sHTXR.json")
 
 def recommend(movie):
     index = movies[movies['title'] == movie].index[0]
