@@ -12,7 +12,7 @@ def fetch_poster(movie_id):
     return full_path
 
 def load_lottieurl(url: str):
-    r = requests.get(url)
+    r = re.get(url)
     if r.status_code != 200:
         return None
     return r.json()
