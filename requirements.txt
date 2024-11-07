@@ -2,5 +2,5 @@ streamlit
 pickles
 scikit-learn
 uvicorn
-
+streamlit_lottie
 nltk
